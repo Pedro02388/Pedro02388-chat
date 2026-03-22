@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro02388 - Chat/title>
+    <style>
+        /* Estilo Geral */
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header / Intro */
+        .intro-container {
+            background: #161b22;
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #30363d;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .profile-pic {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px solid #5865F2;
+        }
+
+        h1 { margin: 10px 0; font-size: 24px; }
+
+        #relogio {
+            font-size: 28px;
+            color: #39ff14;
+            font-family: monospace;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .btn-discord {
+            display: inline-block;
+            background: #5865F2;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 10px 0;
+            transition: 0.3s;
+        }
+
+        .btn-discord:hover { background: #4752c4; transform: scale(1.05); }
+
+        /* Container do Chat */
+        .chat-wrapper {
+            width: 100%;
+            max-width: 800px;
+            height: 600px; /* Altura do chat */
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #30363d;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .footer {
+            margin-bottom: 30px;
+            color: #484f58;
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="intro-container">
+        <img src="https://cdn.discordapp.com/emojis/1484642953681965156.png?v=1&size=48&quality=lossless" class="profile-pic">
+        <h1>Pedro02388 - Chat</h1>
+        
+        <div id="relogio">00:00:00</div>
+        
+        <p style="color: #8b949e;">Faça parte da nossa comunidade oficial!</p>
+        <a href="https://discord.gg/Tnexdv6ZrH" target="_blank" class="btn-discord">Entrar no Servidor Discord</a>
+    </div>
+
+    <div class="chat-wrapper">
+        <iframe src="https://pedro02388-ofc.chatango.com/" scrolling="no"></iframe>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 Pedro02388 — Todos os direitos reservados.</p>
+    </div>
+
+    <script>
+        // Relógio em tempo real
+        function startClock() {
+            const el = document.getElementById('relogio');
+            setInterval(() => {
+                const now = new Date();
+                el.innerText = now.toLocaleTimeString('pt-BR');
+            }, 1000);
+        }
+        startClock();
+
+        // Bloqueios de segurança que você pediu
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.onkeydown = function(e) {
+            if (e.keyCode === 123) return false;
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 85 || e.keyCode === 83)) return false;
+        };
+    </script>
+</body>
+</html>
